@@ -262,20 +262,20 @@ function GUI() {
 
   const sendInput = useCallback(
     (editorState: JSONContent, modifiers: InputModifiers) => {
-      if (defaultModel?.provider === "free-trial") {
-        const u = getLocalStorage("ftc");
-        if (u) {
-          setLocalStorage("ftc", u + 1);
+      // if (defaultModel?.provider === "free-trial") {
+      //   const u = getLocalStorage("ftc");
+      //   if (u) {
+      //     setLocalStorage("ftc", u + 1);
 
-          if (u >= FREE_TRIAL_LIMIT_REQUESTS) {
-            navigate("/onboarding");
-            posthog?.capture("ftc_reached");
-            return;
-          }
-        } else {
-          setLocalStorage("ftc", 1);
-        }
-      }
+      //     if (u >= FREE_TRIAL_LIMIT_REQUESTS) {
+      //       navigate("/onboarding");
+      //       posthog?.capture("ftc_reached");
+      //       return;
+      //     }
+      //   } else {
+      //     setLocalStorage("ftc", 1);
+      //   }
+      // }
 
       streamResponse(editorState, modifiers, ideMessenger);
 

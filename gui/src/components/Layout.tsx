@@ -197,13 +197,13 @@ const Layout = () => {
     [navigate],
   );
 
-  useWebviewListener(
-    "openOnboarding",
-    async () => {
-      navigate("/onboarding");
-    },
-    [navigate],
-  );
+  // useWebviewListener(
+  //   "openOnboarding",
+  //   async () => {
+  //     navigate("/onboarding");
+  //   },
+  //   [navigate],
+  // );
 
   useWebviewListener(
     "incrementFtc",
@@ -229,14 +229,14 @@ const Layout = () => {
     [navigate],
   );
 
-  useEffect(() => {
-    if (
-      shouldBeginOnboarding() &&
-      (location.pathname === "/" || location.pathname === "/index.html")
-    ) {
-      navigate("/onboarding");
-    }
-  }, [location]);
+  // useEffect(() => {
+  //   if (
+  //     shouldBeginOnboarding() &&
+  //     (location.pathname === "/" || location.pathname === "/index.html")
+  //   ) {
+  //     navigate("/onboarding");
+  //   }
+  // }, [location]);
 
   const [indexingState, setIndexingState] = useState<IndexingProgressUpdate>({
     desc: "Loading indexing config",
@@ -284,7 +284,7 @@ const Layout = () => {
               </div>
 
               <ProfileSwitcher />
-              <HeaderButtonWithText
+              {/* <HeaderButtonWithText
                 text="Help"
                 onClick={() => {
                   if (location.pathname === "/help") {
@@ -295,7 +295,7 @@ const Layout = () => {
                 }}
               >
                 <QuestionMarkCircleIcon width="1.4em" height="1.4em" />
-              </HeaderButtonWithText>
+              </HeaderButtonWithText> */}
             </Footer>
           )}
         </GridDiv>

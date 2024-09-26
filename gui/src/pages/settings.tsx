@@ -153,7 +153,7 @@ function Settings() {
             className="inline-block ml-4 cursor-pointer"
           />
           <h3 className="text-lg font-bold m-2 inline-block">Settings</h3>
-          <ConfigJsonButton
+          {/* <ConfigJsonButton
             onClick={() => {
               ideMessenger.post("showFile", {
                 filepath:
@@ -164,7 +164,7 @@ function Settings() {
             }}
           >
             Open config.json
-          </ConfigJsonButton>
+          </ConfigJsonButton> */}
         </div>
         <form onSubmit={formMethods.handleSubmit(onSubmit)}>
           {config ? (

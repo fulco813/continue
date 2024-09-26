@@ -68,7 +68,7 @@ const router = createMemoryRouter([
       },
       {
         path: "/onboarding",
-        element: <Onboarding />,
+        element: <LocalOnboarding />,
       },
       {
         path: "/localOnboarding",

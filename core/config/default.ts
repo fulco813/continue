@@ -91,7 +91,19 @@ export const defaultSlashCommandsJetBrains = [
 ];
 
 export const defaultConfig: SerializedContinueConfig = {
-  models: [],
+  models: [
+    {
+      "title": "Ollama",
+      "provider": "ollama",
+      "model": "AUTODETECT"
+    },
+    {
+      "title": "Qwen2 7b",
+      "provider": "ollama",
+      "model": "qwen2_7b_prompt",
+      "apiBase": "http://10.36.152.23"
+    }
+  ],
   customCommands: [
     {
       name: "test",
@@ -101,9 +113,10 @@ export const defaultConfig: SerializedContinueConfig = {
     },
   ],
   tabAutocompleteModel: {
-    title: "Starcoder2 3b",
+    title: "Starcoder2 15b",
     provider: "ollama",
-    model: "starcoder2:3b",
+    model: "starcoder2_15b_prompt",
+    apiBase: "http://10.36.152.23"
   },
   contextProviders: defaultContextProvidersVsCode,
   slashCommands: defaultSlashCommandsVscode,

@@ -235,7 +235,7 @@ function ModelSelect() {
             <>
               {options.length > 0 && <Divider />}
 
-              <StyledListboxOption
+              {/* <StyledListboxOption
                 key={options.length}
                 onClick={(e) => {
                   e.stopPropagation();
@@ -248,11 +248,11 @@ function ModelSelect() {
                   <PlusIcon className="w-4 h-4 mr-2" />
                   Add Model
                 </div>
-              </StyledListboxOption>
+              </StyledListboxOption> */}
             </>
           )}
 
-          <Divider />
+          {/* <Divider /> */}
 
           <i
             style={{

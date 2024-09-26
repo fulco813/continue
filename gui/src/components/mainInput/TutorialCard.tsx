@@ -67,7 +67,7 @@ export function TutorialCard({ onClose }: TutorialCardProps) {
             Click the gear icon in the bottom right to configure Continue
           </span>
         </li>
-        <li className="flex items-start">
+        {/* <li className="flex items-start">
           <BookOpenIcon
             width="1.4em"
             height="1.4em"
@@ -79,7 +79,7 @@ export function TutorialCard({ onClose }: TutorialCardProps) {
             </a>{" "}
             to learn more
           </span>
-        </li>
+        </li> */}
       </ul>
     </TutorialCardDiv>
   );

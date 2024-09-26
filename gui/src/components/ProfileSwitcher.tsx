@@ -218,7 +218,7 @@ function ProfileSwitcher(props: {}) {
         )}
 
       {/* Settings button (either opens config.json or /settings page in control plane) */}
-      <HeaderButtonWithText
+      {/* <HeaderButtonWithText
         onClick={() => {
           if (selectedProfileId === "local") {
             ideMessenger.post("openConfigJson", undefined);
@@ -232,7 +232,7 @@ function ProfileSwitcher(props: {}) {
         text="Configure Continue"
       >
         <Cog6ToothIcon width="1.4em" height="1.4em" />
-      </HeaderButtonWithText>
+      </HeaderButtonWithText> */}
 
       {/* Only show login if beta explicitly enabled */}
       {controlServerBetaEnabled && (
