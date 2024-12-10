@@ -101,7 +101,7 @@ export class ContinueGUIWebviewViewProvider
     private readonly windowId: string,
     private readonly extensionContext: vscode.ExtensionContext,
   ) {
-    this.outputChannel = vscode.window.createOutputChannel("Continue");
+    this.outputChannel = vscode.window.createOutputChannel("CodeLift");
     this.enableDebugLogs = false;
     this.updateDebugLogsStatus();
     this.setupDebugLogsListener();
@@ -177,7 +177,7 @@ export class ContinueGUIWebviewViewProvider
         <script>const vscode = acquireVsCodeApi();</script>
         <link href="${styleMainUri}" rel="stylesheet">
 
-        <title>Continue</title>
+        <title>CodeLift</title>
       </head>
       <body>
         <div id="root"></div>

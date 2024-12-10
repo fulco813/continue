@@ -263,7 +263,7 @@ function TipTapEditor(props: TipTapEditorProps) {
       Placeholder.configure({
         placeholder: () =>
           historyLengthRef.current === 0
-            ? "Ask anything, '/' for slash commands, '@' to add context"
+            ? "Ask anything, '@' to add context"
             : "Ask a follow-up",
       }),
       Paragraph.extend({
@@ -377,12 +377,12 @@ function TipTapEditor(props: TipTapEditorProps) {
         HTMLAttributes: {
           class: "mention",
         },
-        suggestion: getSlashCommandDropdownOptions(
-          availableSlashCommandsRef,
-          onClose,
-          onOpen,
-          ideMessenger,
-        ),
+        // suggestion: getSlashCommandDropdownOptions(
+        //   availableSlashCommandsRef,
+        //   onClose,
+        //   onOpen,
+        //   ideMessenger,
+        // ),
         renderText: (props) => {
           return props.node.attrs.label;
         },

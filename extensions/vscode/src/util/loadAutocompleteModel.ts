@@ -57,21 +57,10 @@ export class TabAutocompleteModel {
       if (!this.shownOllamaWarning) {
         vscode.window
           .showWarningMessage(
-            "Continue failed to connect to Ollama, which is used by default for tab-autocomplete. If you haven't downloaded it yet, you can do so at https://ollama.ai (recommended). If you'd like to use a custom model for tab autocomplete, learn more in the docs",
+            "Codelift failed to connect to Ollama, which is used by default for tab-autocomplete. If you haven't downloaded it yet, you can do so at https://ollama.ai (recommended). If you'd like to use a custom model for tab autocomplete, learn more in the docs",
             "Download Ollama",
             "Documentation",
           )
-          .then((value) => {
-            if (value === "Documentation") {
-              vscode.env.openExternal(
-                vscode.Uri.parse(
-                  "https://docs.continue.dev/walkthroughs/tab-autocomplete",
-                ),
-              );
-            } else if (value === "Download Ollama") {
-              vscode.env.openExternal(vscode.Uri.parse("https://ollama.ai"));
-            }
-          });
         this.shownOllamaWarning = true;
       }
       return undefined;

@@ -42,11 +42,11 @@ const statusBarItemText = (status: StatusBarStatus | undefined) => {
   switch (status) {
     case undefined:
     case StatusBarStatus.Disabled:
-      return "$(circle-slash) Continue";
+      return "$(circle-slash) CodeLift";
     case StatusBarStatus.Enabled:
-      return "$(check) Continue";
+      return "$(check) CodeLift";
     case StatusBarStatus.Paused:
-      return "$(debug-pause) Continue";
+      return "$(debug-pause) CodeLift";
   }
 };
 
@@ -89,7 +89,7 @@ export function setupStatusBar(
   }
 
   statusBarItem.text = loading
-    ? "$(loading~spin) Continue"
+    ? "$(loading~spin) CodeLift"
     : statusBarItemText(status);
   statusBarItem.tooltip = statusBarItemTooltip(status ?? statusBarStatus);
   statusBarItem.command = "continue.openTabAutocompleteConfigMenu";

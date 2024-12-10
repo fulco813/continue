@@ -17,7 +17,7 @@ import {
 import { PromiseAdapter, promiseFromEvent } from "./promiseUtils";
 
 export const AUTH_TYPE = "continue";
-const AUTH_NAME = "Continue";
+const AUTH_NAME = "CodeLift";
 const CLIENT_ID =
   process.env.CONTROL_PLANE_ENV === "local"
     ? "client_01J0FW6XCPMJMQ3CG51RB4HBZQ"
@@ -277,7 +277,7 @@ export class WorkOsAuthProvider implements AuthenticationProvider, Disposable {
     return await window.withProgress<string>(
       {
         location: ProgressLocation.Notification,
-        title: "Signing in to Continue...",
+        title: "Signing in to CodeLift...",
         cancellable: true,
       },
       async (_, token) => {

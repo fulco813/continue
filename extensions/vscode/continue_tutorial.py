@@ -46,7 +46,7 @@ def mysterious_function(x):
             if x[j] > x[j + 1]:
                 x[j], x[j + 1] = x[j + 1], x[j]
                 swapped = True
-        if swapped == False:
+        if not swapped:
             break
     return x
 

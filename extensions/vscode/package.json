@@ -1,25 +1,14 @@
 {
   "name": "continue",
   "icon": "media/icon.png",
-  "version": "0.9.206",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/continuedev/continue"
-  },
+  "version": "0.9.214",
   "extensionKind": [
     "ui",
     "workspace"
   ],
-  "bugs": {
-    "url": "https://github.com/continuedev/continue/issues",
-    "email": "nate@continue.dev"
-  },
-  "homepage": "https://continue.dev",
-  "qna": "https://github.com/continuedev/continue/issues/new/choose",
   "license": "Apache-2.0",
-  "displayName": "Continue - Codestral, Claude, and more",
+  "displayName": "CodeLift",
   "pricing": "Free",
-  "description": "The leading open-source AI code assistant",
   "publisher": "Continue",
   "engines": {
     "vscode": "^1.70.0",
@@ -67,47 +56,44 @@
       }
     ],
     "configuration": {
-      "title": "Continue",
+      "title": "Codelift",
       "properties": {
         "continue.telemetryEnabled": {
           "type": "boolean",
-          "default": true,
-          "markdownDescription": "Continue collects anonymous usage data, cleaned of PII, to help us improve the product for our users. Read more  at [continue.dev › Telemetry](https://docs.continue.dev/telemetry)."
+          "default": true
         },
         "continue.enableContinueForTeamsBeta": {
           "type": "boolean",
-          "default": false,
-          "markdownDescription": "Enable Continue for teams beta features (requires window reload)"
+          "default": false
         },
         "continue.showInlineTip": {
           "type": "boolean",
           "default": true,
-          "description": "Show inline suggestion to use the Continue keyboard shortcuts (e.g. \"Cmd/Ctrl L to select code, Cmd/Ctrl I to edit\")."
+          "description": "Show inline suggestion to use the Codelift keyboard shortcuts (e.g. \"Cmd/Ctrl L to select code, Cmd/Ctrl I to edit\")."
         },
         "continue.enableQuickActions": {
           "type": "boolean",
-          "default": true,
-          "markdownDescription": "Enable the experimental Quick Actions feature. Read our walkthrough to learn about configuration and how to share feedback: [continue.dev › Walkthrough: Quick Actions (experimental)](https://docs.continue.dev/walkthroughs/quick-actions)"
+          "default": true
         },
         "continue.enableTabAutocomplete": {
           "type": "boolean",
           "default": true,
-          "markdownDescription": "Enable Continue's tab autocomplete feature. Read our walkthrough to learn about configuration and how to share feedback: [continue.dev › Walkthrough: Tab Autocomplete (beta)](https://docs.continue.dev/walkthroughs/tab-autocomplete)"
+          "markdownDescription": "Enable Codelift's tab autocomplete feature. Read our walkthrough to learn about configuration and how to share feedback: [continue.dev › Walkthrough: Tab Autocomplete (beta)](https://docs.continue.dev/walkthroughs/tab-autocomplete)"
         },
         "continue.pauseTabAutocompleteOnBattery": {
           "type": "boolean",
           "default": false,
-          "markdownDescription": "Pause Continue's tab autocomplete feature when your battery is low."
+          "markdownDescription": "Pause Codelift's tab autocomplete feature when your battery is low."
         },
         "continue.pauseCodebaseIndexOnStart": {
           "type": "boolean",
           "default": false,
-          "markdownDescription": "Pause Continue's codebase index on start."
+          "markdownDescription": "Pause Codelift's codebase index on start."
         },
         "continue.enableDebugLogs": {
           "type": "boolean",
           "default": false,
-          "markdownDescription": "Enable Continue Debug Logs in the Output panel."
+          "markdownDescription": "Enable Codelift Debug Logs in the Output panel."
         },
         "continue.remoteConfigServerUrl": {
           "type": "string",
@@ -173,7 +159,7 @@
       {
         "command": "continue.debugTerminal",
         "category": "Continue",
-        "title": "Continue: Debug Terminal",
+        "title": "Codelift: Debug Terminal",
         "group": "Continue"
       },
       {
@@ -198,7 +184,7 @@
       {
         "command": "continue.selectFilesAsContext",
         "category": "Continue",
-        "title": "Continue: Select Files as Context",
+        "title": "Codelift: Select Files as Context",
         "group": "Continue"
       },
       {
@@ -454,7 +440,7 @@
       "activitybar": [
         {
           "id": "continue",
-          "title": "Continue",
+          "title": "Codelift",
           "icon": "media/sidebar-icon.png"
         }
       ]
@@ -473,12 +459,12 @@
       {
         "id": "continue",
         "title": "Getting Started",
-        "description": "Learn how to use Continue",
+        "description": "Learn how to use Codelift",
         "steps": [
           {
             "id": "edit",
             "title": "Edit in natural language",
-            "description": "Highlight a section of code and instruct Continue to refactor it (e.g. `/edit rewrite this function to be async`)",
+            "description": "Highlight a section of code and instruct Codelift to refactor it (e.g. `/edit rewrite this function to be async`)",
             "media": {
               "image": "media/edit.png",
               "altText": "Empty image"
@@ -488,7 +474,7 @@
           {
             "id": "explain",
             "title": "Get possible explanations",
-            "description": "Ask Continue about a part of your code to get another perspective (e.g. `where in the page should I be making this request to the backend?`)",
+            "description": "Ask Codelift about a part of your code to get another perspective (e.g. `where in the page should I be making this request to the backend?`)",
             "media": {
               "image": "media/explain.png",
               "altText": "Empty image"
@@ -498,7 +484,7 @@
           {
             "id": "generate",
             "title": "Generate files from scratch",
-            "description": "Let Continue build the scaffolding of Python scripts, React components, and more (e.g. `/edit here is a connector for postgres, now write one for kafka`)",
+            "description": "Let Codelift build the scaffolding of Python scripts, React components, and more (e.g. `/edit here is a connector for postgres, now write one for kafka`)",
             "media": {
               "image": "media/generate.png",
               "altText": "Empty image"

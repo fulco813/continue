@@ -38,20 +38,11 @@ const val DEFAULT_CONFIG = """
       "description": "Write comments for the highlighted code"
     },
     {
-      "name": "share",
-      "description": "Export the current chat session to markdown"
-    },
-    {
       "name": "cmd",
       "description": "Generate a shell command"
     }
   ],
   "customCommands": [
-    {
-      "name": "test",
-      "prompt": "{{{ input }}}\n\nWrite a comprehensive set of unit tests for the selected code. It should setup, run tests that check for correctness including important edge cases, and teardown. Ensure that the tests are complete and sophisticated. Give the tests just as chat output, don't edit any file.",
-      "description": "Write unit tests for highlighted code"
-    }
   ],
   "contextProviders": [
     { "name": "diff", "params": {} },

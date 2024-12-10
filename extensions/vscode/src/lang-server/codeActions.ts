@@ -18,7 +18,7 @@ class ContinueQuickFixProvider implements vscode.CodeActionProvider {
     const diagnostic = context.diagnostics[0];
 
     const quickFix = new vscode.CodeAction(
-      "Ask Continue",
+      "Ask CodeLift",
       vscode.CodeActionKind.QuickFix,
     );
 
@@ -33,7 +33,7 @@ class ContinueQuickFixProvider implements vscode.CodeActionProvider {
 
     quickFix.command = {
       command: "continue.quickFix",
-      title: "Continue Quick Fix",
+      title: "CodeLift Quick Fix",
       arguments: [surroundingRange, diagnostic.message],
     };
 

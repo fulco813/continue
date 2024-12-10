@@ -5,12 +5,12 @@ import DraftIssueCommand from "./draftIssue.js";
 import EditSlashCommand from "./edit.js";
 import HttpSlashCommand from "./http.js";
 import ReviewMessageCommand from "./review.js";
-import ShareSlashCommand from "./share.js";
+// import ShareSlashCommand from "./share.js";
 import StackOverflowSlashCommand from "./stackOverflow.js";
 
 export default [
   DraftIssueCommand,
-  ShareSlashCommand,
+  // ShareSlashCommand,
   StackOverflowSlashCommand,
   GenerateTerminalCommand,
   EditSlashCommand,

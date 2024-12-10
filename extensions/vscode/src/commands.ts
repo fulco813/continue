@@ -489,7 +489,7 @@ const commandsMap: (
       //create the full screen panel
       let panel = vscode.window.createWebviewPanel(
         "continue.continueGUIView",
-        "Continue",
+        "CodeLift",
         vscode.ViewColumn.One,
         {
           retainContextWhenHidden: true,
@@ -615,20 +615,20 @@ const commandsMap: (
         {
           label: quickPickStatusText(targetStatus),
         },
-        {
-          label: "$(gear) Configure autocomplete options",
-        },
-        {
-          label: "$(feedback) Give feedback",
-        },
-        {
-          kind: vscode.QuickPickItemKind.Separator,
-          label: "Switch model",
-        },
-        ...autocompleteModelTitles.map((title) => ({
-          label: title === selected ? `$(check) ${title}` : title,
-          description: title === selected ? "Currently selected" : undefined,
-        })),
+        // {
+        //   label: "$(gear) Configure autocomplete options",
+        // },
+        // {
+        //   label: "$(feedback) Give feedback",
+        // },
+        // {
+        //   kind: vscode.QuickPickItemKind.Separator,
+        //   label: "Switch model",
+        // },
+        // ...autocompleteModelTitles.map((title) => ({
+        //   label: title === selected ? `$(check) ${title}` : title,
+        //   description: title === selected ? "Currently selected" : undefined,
+        // })),
       ];
       quickPick.onDidAccept(() => {
         const selectedOption = quickPick.selectedItems[0].label;

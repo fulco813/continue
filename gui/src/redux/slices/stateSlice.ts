@@ -121,10 +121,10 @@ const initialState: State = {
         name: "comment",
         description: "Write comments for the selected code",
       },
-      {
-        name: "share",
-        description: "Export the current chat session to markdown",
-      },
+      // {
+      //   name: "share",
+      //   description: "Export the current chat session to markdown",
+      // },
       {
         name: "cmd",
         description: "Generate a shell command",

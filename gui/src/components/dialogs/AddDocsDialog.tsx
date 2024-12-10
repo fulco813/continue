@@ -67,12 +67,12 @@ function AddDocsDialog() {
         <h2>Add Docs</h2>
 
         <p>
-          Continue pre-indexes many common documentation sites, but if there's
+          CodeLift pre-indexes many common documentation sites, but if there's
           one you don't see in the dropdown, enter the URL here.
         </p>
 
         <p>
-          Continue's indexing engine will crawl the site and generate embeddings
+          CodeLift's indexing engine will crawl the site and generate embeddings
           so that you can ask questions.
         </p>
       </div>
