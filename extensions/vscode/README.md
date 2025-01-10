@@ -1,4 +1,4 @@
-<div align="center">
+<!-- <div align="center">
 
 ![Continue logo](media/readme.png)
 
@@ -54,4 +54,4 @@
 
 ## License
 
-[Apache 2.0 © 2023-2024 Continue Dev, Inc.](./LICENSE)
+[Apache 2.0 © 2023-2024 Continue Dev, Inc.](./LICENSE) -->

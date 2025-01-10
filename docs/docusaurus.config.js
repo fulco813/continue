@@ -5,7 +5,7 @@ const { themes } = require("prism-react-renderer");
 const lightCodeTheme = themes.github;
 const darkCodeTheme = themes.dracula;
 
-/** @type {import('@docusaurus/types').Config} */
+/** @type {import("@docusaurus/types").Config} */
 const config = {
   // Docusaurus V3.6 experimental faster compile features
   // https://docusaurus.io/blog/releases/3.6#adoption-strategy
@@ -13,13 +13,13 @@ const config = {
     experimental_faster: true,
   },
 
-  title: "Continue",
+  title: "CodeLift",
   tagline:
     "the open-source library for accelerating software development with language models",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://continue.dev",
+  url: "",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
@@ -48,12 +48,12 @@ const config = {
   presets: [
     [
       "classic",
-      /** @type {import('@docusaurus/preset-classic').Options} */
+      /** @type {import("@docusaurus/preset-classic").Options} */
       ({
         docs: {
           routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/continuedev/continue/tree/main/docs",
+          editUrl: "",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -66,7 +66,7 @@ const config = {
   ],
 
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+    /** @type {import("@docusaurus/preset-classic").ThemeConfig} */
     ({
       metadata: [
         {
@@ -78,11 +78,11 @@ const config = {
       // Replace with your project's social card
       image: "https://docs.continue.dev/img/continue-social-card.png",
       navbar: {
-        title: "Continue",
+        title: "CodeLift",
         logo: {
           alt: "Continue Logo",
           src: "img/logo.png",
-          href: "https://continue.dev",
+          href: "",
           target: "_blank",
         },
         items: [
@@ -121,7 +121,7 @@ const config = {
             className: "github-navbar",
           },
           {
-            to: "https://discord.gg/vapESyrFmJ",
+            to: "",
             label: "Discord",
             position: "right",
             className: "discord-navbar",
@@ -140,11 +140,11 @@ const config = {
             items: [
               {
                 label: "VS Code",
-                to: "https://marketplace.visualstudio.com/items?itemName=Continue.continue",
+                to: "",
               },
               {
                 label: "JetBrains",
-                to: "https://plugins.jetbrains.com/plugin/22707-continue-extension",
+                to: "",
               },
             ],
           },
@@ -153,11 +153,11 @@ const config = {
             items: [
               {
                 label: "Discord",
-                to: "https://discord.gg/vapESyrFmJ",
+                to: "",
               },
               {
                 label: "GitHub",
-                to: "https://github.com/continuedev/continue",
+                to: "",
               },
             ],
           },
@@ -166,11 +166,11 @@ const config = {
             items: [
               {
                 label: "Twitter",
-                to: "https://twitter.com/continuedev",
+                to: "",
               },
               {
                 label: "LinkedIn",
-                to: "https://linkedin.com/company/continuedev",
+                to: "",
               },
             ],
           },

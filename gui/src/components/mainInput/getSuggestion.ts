@@ -160,32 +160,34 @@ export function getContextProviderDropdownOptions(
         }))
         .sort((c, _) => (c.id === "file" ? -1 : 1)) || [];
 
-    if (contextProviderMatches.length) {
-      contextProviderMatches.push({
-        title: "Add more context providers",
-        type: "action",
-        action: () => {
-          ideMessenger.post(
-            "openUrl",
-            "https://docs.continue.dev/customization/context-providers#built-in-context-providers",
-          );
-        },
-        description: "",
+    if (mainResults.length === 0) {
+      const results = getSubmenuContextItemsRef.current(undefined, query);
+      return results.map((result) => {
+        return {
+          ...result,
+          label: result.title,
+          type: result.providerTitle as ComboBoxItemType,
+          query: result.id,
+          icon: result.icon,
+        };
       });
-      return contextProviderMatches;
-    }
-
-    // No provider matches -> search all providers
-    const results = getSubmenuContextItemsRef.current(undefined, query);
-    return results.map((result) => {
-      return {
-        ...result,
-        label: result.title,
-        type: result.providerTitle as ComboBoxItemType,
-        query: result.id,
-        icon: result.icon,
-      };
-    });
+    } 
+    // else if (
+    //   mainResults.length === availableContextProvidersRef.current.length
+    // ) {
+    //   mainResults.push({
+    //     title: "Add more context providers",
+    //     type: "action",
+    //     action: () => {
+    //       ideMessenger.post(
+    //         "openUrl",
+    //         "https://docs.continue.dev/customization/context-providers#built-in-context-providers",
+    //       );
+    //     },
+    //     description: "",
+    //   });
+    // }
+    return mainResults;
   };
 
   return getSuggestion(items, enterSubmenu, onClose, onOpen);

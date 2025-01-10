@@ -572,21 +572,17 @@ export function Chat() {
 
           {history.length === 0 && (
             <>
-              {onboardingCard.show && (
-                <div className="mx-2 mt-10">
-                  {useHub ? (
-                    <PlatformOnboardingCard isDialog={false} />
-                  ) : (
-                    <OnboardingCard isDialog={false} />
-                  )}
-                </div>
-              )}
+              {/*{onboardingCard.show && (*/}
+              {/*  <div className="mx-2 mt-10">*/}
+              {/*    <OnboardingCard />*/}
+              {/*  </div>*/}
+              {/*)}*/}
 
-              {showTutorialCard !== false && !onboardingCard.show && (
-                <div className="flex w-full justify-center">
-                  <TutorialCard onClose={closeTutorialCard} />
-                </div>
-              )}
+              {/*{showTutorialCard !== false && !onboardingCard.open && (*/}
+              {/*  <div className="flex w-full justify-center">*/}
+              {/*    <TutorialCard onClose={closeTutorialCard} />*/}
+              {/*  </div>*/}
+              {/*)}*/}
             </>
           )}
         </div>

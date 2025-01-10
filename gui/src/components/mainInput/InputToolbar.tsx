@@ -111,36 +111,36 @@ function InputToolbar(props: InputToolbarProps) {
         <div className="flex items-center justify-start gap-2 whitespace-nowrap">
           <ModelSelect />
           <div className="xs:flex -mb-1 hidden items-center text-gray-400 transition-colors duration-200">
-            {props.toolbarOptions?.hideImageUpload ||
-              (supportsImages && (
-                <>
-                  <input
-                    type="file"
-                    ref={fileInputRef}
-                    style={{ display: "none" }}
-                    accept=".jpg,.jpeg,.png,.gif,.svg,.webp"
-                    onChange={(e) => {
-                      const files = e.target?.files ?? [];
-                      for (const file of files) {
-                        props.onImageFileSelected?.(file);
-                      }
-                    }}
-                  />
-                  <HoverItem className="">
-                    <PhotoIcon
-                      className="h-4 w-4 hover:brightness-125"
-                      data-tooltip-id="image-tooltip"
-                      onClick={(e) => {
-                        fileInputRef.current?.click();
-                      }}
-                    />
-                    <ToolTip id="image-tooltip" place="top-middle">
-                      Attach an image
-                    </ToolTip>
-                  </HoverItem>
-                </>
-              ))}
-            {props.toolbarOptions?.hideAddContext || (
+            {/*{props.toolbarOptions?.hideImageUpload ||*/}
+            {/*  (supportsImages && (*/}
+            {/*    <>*/}
+            {/*      <input*/}
+            {/*        type="file"*/}
+            {/*        ref={fileInputRef}*/}
+            {/*        style={{ display: "none" }}*/}
+            {/*        accept=".jpg,.jpeg,.png,.gif,.svg,.webp"*/}
+            {/*        onChange={(e) => {*/}
+            {/*          const files = e.target?.files ?? [];*/}
+            {/*          for (const file of files) {*/}
+            {/*            props.onImageFileSelected?.(file);*/}
+            {/*          }*/}
+            {/*        }}*/}
+            {/*      />*/}
+            {/*      <HoverItem>*/}
+            {/*        <PhotoIcon*/}
+            {/*          className="h-4 w-4 hover:brightness-125"*/}
+            {/*          data-tooltip-id="image-tooltip"*/}
+            {/*          onClick={(e) => {*/}
+            {/*            fileInputRef.current?.click();*/}
+            {/*          }}*/}
+            {/*        />*/}
+            {/*        <ToolTip id="image-tooltip" place="top-middle">*/}
+            {/*          Attach an image*/}
+            {/*        </ToolTip>*/}
+            {/*      </HoverItem>*/}
+            {/*    </>*/}
+            {/*  ))}*/}
+            {/* {props.toolbarOptions?.hideAddContext || (
               <HoverItem onClick={props.onAddContextItem}>
                 <AtSymbolIcon
                   data-tooltip-id="add-context-item-tooltip"
@@ -151,9 +151,9 @@ function InputToolbar(props: InputToolbarProps) {
                   Add context (files, docs, urls, etc.)
                 </ToolTip>
               </HoverItem>
-            )}
+            )} */}
 
-            <ToggleToolsButton disabled={!toolsSupported} />
+            {/*{shouldRenderToolsButton && <ToggleToolsButton />}*/}
           </div>
         </div>
 

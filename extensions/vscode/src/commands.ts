@@ -360,6 +360,7 @@ const getCommandsMap: (
       range,
     );
   }
+
   return {
     "continue.acceptDiff": async (newFileUri?: string, streamId?: string) =>
       processDiff(
@@ -751,7 +752,7 @@ const getCommandsMap: (
       // Create the full screen panel
       let panel = vscode.window.createWebviewPanel(
         "continue.continueGUIView",
-        "Continue",
+        "CodeLift",
         vscode.ViewColumn.One,
         {
           retainContextWhenHidden: true,

@@ -562,7 +562,7 @@ function TipTapEditor(props: TipTapEditorProps) {
     }
 
     return historyLength === 0
-      ? "Ask anything, '@' to add context"
+      ? "Ask anything to CodeLift"
       : "Ask a follow-up";
   }
 

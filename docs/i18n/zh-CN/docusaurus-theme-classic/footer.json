@@ -13,30 +13,30 @@
   },
   "link.item.label.VS Code": {
     "message": "VS Code",
-    "description": "The label of footer link with label=VS Code linking to https://marketplace.visualstudio.com/items?itemName=Continue.continue"
+    "description": ""
   },
   "link.item.label.JetBrains": {
     "message": "JetBrains",
-    "description": "The label of footer link with label=JetBrains linking to https://plugins.jetbrains.com/plugin/22707-continue-extension"
+    "description": ""
   },
   "link.item.label.Discord": {
     "message": "Discord",
-    "description": "The label of footer link with label=Discord linking to https://discord.gg/vapESyrFmJ"
+    "description": ""
   },
   "link.item.label.GitHub": {
     "message": "GitHub",
-    "description": "The label of footer link with label=GitHub linking to https://github.com/continuedev/continue"
+    "description": ""
   },
   "link.item.label.Twitter": {
     "message": "Twitter",
-    "description": "The label of footer link with label=Twitter linking to https://twitter.com/continuedev"
+    "description": ""
   },
   "link.item.label.LinkedIn": {
     "message": "LinkedIn",
-    "description": "The label of footer link with label=LinkedIn linking to https://linkedin.com/company/continuedev"
+    "description": ""
   },
   "copyright": {
-    "message": "Copyright © 2024 Continue Dev, Inc.",
-    "description": "The footer copyright"
+    "message": "",
+    "description": ""
   }
 }

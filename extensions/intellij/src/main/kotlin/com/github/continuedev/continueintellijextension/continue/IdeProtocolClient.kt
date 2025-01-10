@@ -56,7 +56,8 @@ class IdeProtocolClient(
                     }
 
                     "showTutorial" -> {
-                        showTutorial(project)
+//                        showTutorial(project)
+                        println("show")
                     }
 
                     "jetbrains/isOSREnabled" -> {

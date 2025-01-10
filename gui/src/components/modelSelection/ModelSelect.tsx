@@ -199,12 +199,12 @@ function ModelOption({
               )}
             </span>
           </div>
-          <div className="ml-5 flex items-center">
-            <StyledCog6ToothIcon $hovered={hovered} onClick={onClickGear} />
-            {showDelete && (
-              <StyledTrashIcon $hovered={hovered} onClick={onClickDelete} />
-            )}
-          </div>
+          {/*<div className="ml-5 flex items-center">*/}
+          {/*  <StyledCog6ToothIcon $hovered={hovered} onClick={onClickGear} />*/}
+          {/*  {showDelete && (*/}
+          {/*    <StyledTrashIcon $hovered={hovered} onClick={onClickDelete} />*/}
+          {/*  )}*/}
+          {/*</div>*/}
         </div>
       </div>
     </StyledListboxOption>
@@ -347,10 +347,8 @@ function ModelSelect() {
             ))}
           </div>
 
-          <div className="mt-auto">
-            <Divider className="!my-0" />
-
-            {selectedProfile?.id === "local" && (
+          {/* <div className="mt-auto">
+            {selectedProfileId === "local" && (
               <>
                 <StyledListboxOption
                   key={options.length}
@@ -370,7 +368,7 @@ function ModelSelect() {
             <span className="block px-3 py-3" style={{ color: lightGray }}>
               <code>{getMetaKeyLabel()} + '</code> to toggle
             </span>
-          </div>
+          </div> */}
         </StyledListboxOptions>
       </div>
     </Listbox>

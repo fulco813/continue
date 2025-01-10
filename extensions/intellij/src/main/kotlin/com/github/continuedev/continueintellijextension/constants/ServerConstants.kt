@@ -14,28 +14,38 @@ const val DEFAULT_CONFIG =
 {
   "models": [
     {
-      "model": "claude-3-5-sonnet-latest",
-      "provider": "anthropic",
-      "apiKey": "",
-      "title": "Claude 3.5 Sonnet"
+      "title": "Qwen2",
+      "provider": "ollama",
+      "model": "qwen2:latest",
+      "apiBase": "http://127.0.0.1:11434"
     }
   ],
+  "customCommands": [],
   "tabAutocompleteModel": {
-    "title": "Codestral",
-    "provider": "mistral",
-    "model": "codestral-latest",
-    "apiKey": "" 
+    "title": "Starcoder2",
+    "provider": "ollama",
+    "model": "starcoder2:latest",
+    "apiBase": "http://127.0.0.1:11434"
   },
-  "customCommands": [
-    {
-      "name": "test",
-      "prompt": "{{{ input }}}\n\nWrite a comprehensive set of unit tests for the selected code. It should setup, run tests that check for correctness including important edge cases, and teardown. Ensure that the tests are complete and sophisticated. Give the tests just as chat output, don't edit any file.",
-      "description": "Write unit tests for highlighted code"
-    }
-  ],
   "contextProviders": [
     {
+      "name": "code",
+      "params": {}
+    },
+    {
+      "name": "docs",
+      "params": {}
+    },
+    {
       "name": "diff",
+      "params": {}
+    },
+    {
+      "name": "terminal",
+      "params": {}
+    },
+    {
+      "name": "problems",
       "params": {}
     },
     {
@@ -49,15 +59,22 @@ const val DEFAULT_CONFIG =
   ],
   "slashCommands": [
     {
-      "name": "share",
-      "description": "Export the current chat session to markdown"
+      "name": "edit",
+      "description": "Edit selected code"
+    },
+    {
+      "name": "comment",
+      "description": "Write comments for the selected code"
+    },
+    {
+      "name": "cmd",
+      "description": "Generate a shell command"
     },
     {
       "name": "commit",
       "description": "Generate a git commit message"
     }
-  ],
-  "docs": []
+  ]
 }
 """
 
@@ -72,69 +89,71 @@ export {
 """
 
 fun getContinueGlobalPath(): String {
-  val continuePath = Paths.get(System.getProperty("user.home"), ".continue")
-  if (Files.notExists(continuePath)) {
-    Files.createDirectories(continuePath)
-  }
-  return continuePath.toString()
+    val continuePath = Paths.get(System.getProperty("user.home"), ".continue")
+    if (Files.notExists(continuePath)) {
+        Files.createDirectories(continuePath)
+    }
+    return continuePath.toString()
 }
 
 fun getContinueRemoteConfigPath(remoteHostname: String): String {
-  val path = Paths.get(getContinueGlobalPath(), ".configs")
-  if (Files.notExists(path)) {
-    Files.createDirectories(path)
-  }
-  return Paths.get(path.toString(), remoteHostname).toString()
+    val path = Paths.get(getContinueGlobalPath(), ".configs")
+    if (Files.notExists(path)) {
+        Files.createDirectories(path)
+    }
+    return Paths.get(path.toString(), remoteHostname).toString()
 }
 
 fun getConfigJsonPath(remoteHostname: String? = null): String {
-  val path =
-      Paths.get(
-          if (remoteHostname != null) getContinueRemoteConfigPath(remoteHostname)
-          else getContinueGlobalPath(),
-          "config.json")
-  if (Files.notExists(path)) {
-    Files.createFile(path)
-    Files.writeString(path, if (remoteHostname == null) DEFAULT_CONFIG else "{}")
-  }
-  return path.toString()
+    val path =
+        Paths.get(
+            if (remoteHostname != null) getContinueRemoteConfigPath(remoteHostname)
+            else getContinueGlobalPath(),
+            "config.json"
+        )
+    if (Files.notExists(path)) {
+        Files.createFile(path)
+        Files.writeString(path, if (remoteHostname == null) DEFAULT_CONFIG else "{}")
+    }
+    return path.toString()
 }
 
 fun getConfigJsPath(remoteHostname: String? = null): String {
-  val path =
-      Paths.get(
-          if (remoteHostname != null) getContinueRemoteConfigPath(remoteHostname)
-          else getContinueGlobalPath(),
-          "config.js")
-  if (Files.notExists(path)) {
-    Files.createFile(path)
-    Files.writeString(path, DEFAULT_CONFIG_JS)
-  }
-  return path.toString()
+    val path =
+        Paths.get(
+            if (remoteHostname != null) getContinueRemoteConfigPath(remoteHostname)
+            else getContinueGlobalPath(),
+            "config.js"
+        )
+    if (Files.notExists(path)) {
+        Files.createFile(path)
+        Files.writeString(path, DEFAULT_CONFIG_JS)
+    }
+    return path.toString()
 }
 
 fun getSessionsDir(): String {
-  val path = Paths.get(getContinueGlobalPath(), "sessions")
-  if (Files.notExists(path)) {
-    Files.createDirectories(path)
-  }
-  return path.toString()
+    val path = Paths.get(getContinueGlobalPath(), "sessions")
+    if (Files.notExists(path)) {
+        Files.createDirectories(path)
+    }
+    return path.toString()
 }
 
 fun getSessionsListPath(): String {
-  val path = Paths.get(getSessionsDir(), "sessions.json")
-  if (Files.notExists(path)) {
-    Files.createFile(path)
-    Files.writeString(path, "[]")
-  }
-  return path.toString()
+    val path = Paths.get(getSessionsDir(), "sessions.json")
+    if (Files.notExists(path)) {
+        Files.createFile(path)
+        Files.writeString(path, "[]")
+    }
+    return path.toString()
 }
 
 fun getSessionFilePath(sessionId: String): String {
-  val path = Paths.get(getSessionsDir(), "$sessionId.json")
-  if (Files.notExists(path)) {
-    Files.createFile(path)
-    Files.writeString(path, "{}")
-  }
-  return path.toString()
+    val path = Paths.get(getSessionsDir(), "$sessionId.json")
+    if (Files.notExists(path)) {
+        Files.createFile(path)
+        Files.writeString(path, "{}")
+    }
+    return path.toString()
 }

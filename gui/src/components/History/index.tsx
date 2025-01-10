@@ -148,10 +148,10 @@ export function History() {
           })}
         </tbody>
       </table>
-      <br />
+      {/* <br />
       <i className="ml-4 text-sm">
         All session data is saved in ~/.continue/sessions
-      </i>
+      </i> */}
     </div>
   );
 }

@@ -29,11 +29,11 @@ function QuickstartSubmitButton({ isDialog }: QuickstartSubmitButtonProps) {
 
   function openJetBrainsDialog() {
     dispatch(setShowDialog(true));
-    dispatch(
-      setDialogMessage(
-        <JetBrainsFetchGitHubTokenDialog onComplete={onComplete} />,
-      ),
-    );
+    // dispatch(
+    //   setDialogMessage(
+    //     <JetBrainsFetchGitHubTokenDialog onComplete={onComplete} />,
+    //   ),
+    // );
   }
 
   async function fetchGitHubAuthToken() {
@@ -52,11 +52,11 @@ function QuickstartSubmitButton({ isDialog }: QuickstartSubmitButtonProps) {
   }
 
   async function onClick() {
-    if (isJetBrains()) {
-      openJetBrainsDialog();
-    } else {
-      await fetchGitHubAuthToken();
-    }
+    // if (isJetBrains()) {
+    //   openJetBrainsDialog();
+    // } else {
+    //   await fetchGitHubAuthToken();
+    // }
   }
 
   return (

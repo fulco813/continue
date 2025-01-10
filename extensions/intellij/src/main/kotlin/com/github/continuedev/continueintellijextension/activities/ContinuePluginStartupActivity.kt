@@ -129,11 +129,11 @@ class ContinuePluginStartupActivity : StartupActivity, DumbAware {
         coroutineScope.launch {
             val settings =
                 ServiceManager.getService(ContinueExtensionSettings::class.java)
-            if (!settings.continueState.shownWelcomeDialog) {
-                settings.continueState.shownWelcomeDialog = true
-                // Open tutorial file
-                showTutorial(project)
-            }
+//            if (!settings.continueState.shownWelcomeDialog) {
+//                settings.continueState.shownWelcomeDialog = true
+//                // Open tutorial file
+//                showTutorial(project)
+//            }
 
             settings.addRemoteSyncJob()
 
