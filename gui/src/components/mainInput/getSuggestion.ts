@@ -160,18 +160,18 @@ export function getContextProviderDropdownOptions(
         }))
         .sort((c, _) => (c.id === "file" ? -1 : 1)) || [];
 
-    if (mainResults.length === 0) {
-      const results = getSubmenuContextItemsRef.current(undefined, query);
-      return results.map((result) => {
-        return {
-          ...result,
-          label: result.title,
-          type: result.providerTitle as ComboBoxItemType,
-          query: result.id,
-          icon: result.icon,
-        };
-      });
-    } 
+    // if (mainResults.length === 0) {
+    //   const results = getSubmenuContextItemsRef.current(undefined, query);
+    //   return results.map((result) => {
+    //     return {
+    //       ...result,
+    //       label: result.title,
+    //       type: result.providerTitle as ComboBoxItemType,
+    //       query: result.id,
+    //       icon: result.icon,
+    //     };
+    //   });
+    // }
     // else if (
     //   mainResults.length === availableContextProvidersRef.current.length
     // ) {
@@ -187,7 +187,7 @@ export function getContextProviderDropdownOptions(
     //     description: "",
     //   });
     // }
-    return mainResults;
+    return contextProviderMatches;
   };
 
   return getSuggestion(items, enterSubmenu, onClose, onOpen);
