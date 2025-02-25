@@ -5,6 +5,7 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/extensions/intellij" />
+        <option name="gradleJvm" value="homebrew-17" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/extensions/intellij" />
@@ -12,6 +13,5 @@
         </option>
       </GradleProjectSettings>
     </option>
-    <option name="offlineMode" value="true" />
   </component>
 </project>
