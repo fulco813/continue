@@ -93,14 +93,40 @@ export const defaultSlashCommandsJetBrains = [
 ];
 
 export const defaultConfig: SerializedContinueConfig = {
-  models: [],
+  models: [
+    {
+      "title": "Qwen2",
+      "provider": "ollama",
+      "model": "qwen2_7b_prompt",
+      "apiBase": "http://10.36.152.23:11434"
+    }
+  ],
+  tabAutocompleteModel: {
+    "title": "Starcoder2",
+    "provider": "ollama",
+    "model": "starcoder2_15b_prompt",
+    "apiBase": "http://10.36.152.23:11434"
+  },
   contextProviders: defaultContextProvidersVsCode,
   slashCommands: defaultSlashCommandsVscode,
   data: [],
 };
 
 export const defaultConfigJetBrains: SerializedContinueConfig = {
-  models: [],
+  models: [
+    {
+      "title": "Qwen2",
+      "provider": "ollama",
+      "model": "qwen2_7b_prompt",
+      "apiBase": "http://10.36.152.23:11434"
+    }
+  ],
+  tabAutocompleteModel: {
+    "title": "Starcoder2",
+    "provider": "ollama",
+    "model": "starcoder2_15b_prompt",
+    "apiBase": "http://10.36.152.23:11434"
+  },
   contextProviders: defaultContextProvidersJetBrains,
   slashCommands: defaultSlashCommandsJetBrains,
   data: [],
